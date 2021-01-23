@@ -1,0 +1,68 @@
+Notes
+
+The program takes dai tokens in the investors wallet, and puts them in the token farm where they earn super tokens as interest
+
+
+
+Name could be found on blockchain to make sure everything is working correctly
+
+Migration files migrate the contracts to the blockchain
+
+Json files describe how the smart contracts work
+
+Ganache acts as a receving server for the smart contract
+
+To send a smart contract to the blockchain cost gas in the form of ether
+
+Truffle migrate, migrates the contract to the blockchain and the cost in ether should be reflected in the 1st block
+
+The truffle console is a javascript runtime enviorment that lets you control the blockchain
+
+
+apples-Air-2:defi-app apple$ truffle console
+truffle(development)> tokenFarm = await TokenFarm.deployed()
+undefined
+truffle(development)> tokenfarm
+--Defining a tokenfarm variable with a asynchrnous await calling the deployed function on the TokenFarm we defined in the 2_deploy_contracts.js file
+
+--Give address and name of deployed smart contract in truffle console
+truffle(development)> tokenFarm.address
+'0x341FDc1b658AE821d3f780022df6d9FE8F027A0D'
+truffle(development)> name = await tokenFarm.name()
+undefined
+truffle(development)> name
+'Super  Token Farm'
+truffle(development)> 
+
+constructor() function runs code for the smart contract once and only once.. Code inside to reference the token you wish to deploy to the network
+
+all variables in solidity need to have a type
+Solidity does not handle decimals
+Most coins have 18 zeros after the decimal point
+
+Tokens and coin must be imported to the deploy contract js file..Inside the js file the module.exports should be followed by a async function because we want seperate counts for the coins, their interest and such 
+
+To migrate new contracts the command used must be truffle migrate --reset to reset any current contract on the chain 
+
+
+--Check account balances in truffle console
+function  mapping(address => uint256) public balanceOf;
+maps an address to a unsigned int with public access 
+
+--The command creates a new folder and file in workspace
+$ mkdir test
+$ touch test/TokenFarm.test.js
+
+-- msg allows the a message to be sent every time a function is called
+address(this) converts the contract 'this' into an address
+
+
+To run web server--
+cd defi-app
+from within run "npm run start" to start web server
+
+Web3.js libraries connects application to the blockchain
+
+className is a react naming convention
+
+inside className the "btn btn-outline... " is bootstrap code 
