@@ -21,8 +21,8 @@ $ git clone https://github.com/KTleft93/defi-app
 ` truffle migrate --reset `
 
 ## Set up Metamask for Chrome
-Use information provided in Ganache to connect to your blockchain
-Use the account address provided in Ganache to faciliate transactions
+- Use information provided in Ganache to connect to your blockchain
+- Use the account address provided in Ganache to faciliate transactions
 
 ## Run the application with command
  ` npm run start `
